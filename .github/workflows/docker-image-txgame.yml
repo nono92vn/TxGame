@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker Wordpress TxGame
-      run: docker build wp --file Dockerfile --tag wordpress:latest
+      run: docker build /wp --file Dockerfile --tag wordpress:latest
