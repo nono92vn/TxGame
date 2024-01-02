@@ -1,0 +1,264 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 30px !important;
+}
+
+.menu-left {
+    width: 50% !important;
+    height: auto;
+    padding: 20px 0!important;
+    margin: 0 !important;
+    display: inline-block !important;
+}
+
+.menu-right {
+    width: 50% !important;
+    height: auto;
+    padding: 20px 0 !important;
+    margin: 0 !important;
+    display: inline-block !important;
+}
+
+/* ------------------- Dropdown Button ------------------- */
+ul.my-lang-menu-with-pages {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    float: right;
+    text-align: right;
+    list-style-type: none !important;
+    position: relative;
+}
+
+ul.my-lang-menu-with-pages p {
+    margin: 0 !important;
+}
+
+ul.list-language {
+    width: 20%;
+    float: right;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.btn.btnMenu {
+    width: 75px;
+    height: 40px;
+    background: silver;
+    padding: 0;
+    margin: 0;
+    border: 1px solid;
+    background-image: url("/wp-content/uploads/txgame-image/menu/world.png");
+    background-repeat: no-repeat;
+    background-size: 35%;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.btn.btnMenu:hover {
+    background: red;
+    background-image: url("/wp-content/uploads/txgame-image/menu/world.png");
+    background-repeat: no-repeat;
+    background-size: 35%;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.btn.btnMenu img {
+    width: 20%;
+    margin: 0;
+    padding: 0;
+}
+
+ul.language-menu {
+    float: right;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 16px;
+    border: none;
+    position: absolute;
+    right: 0;
+}
+
+ul.language-menu a.dropdown-item img {
+    margin-right: 20px;
+    width: 20% !important;
+    height: 20% !important;
+}
+
+ul.language-menu li {
+    display: inline-block;
+    padding: 5px;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    background: silver;
+    border: 1px solid;
+    position: relative;
+}
+
+ul.list-active {
+    width: 80%;
+    float: left;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+ul.list-active li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+li.lang-flag:hover {
+    background: red;
+}
+
+.show {
+    display:block;
+}
+
+.active {
+    background: red !important;
+}
+
+/* --------------- Dropdown Button end -------------------*/
+/*---------------- Contact Form 7 -------------------*/
+.wpcf7-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+  
+.wpcf7-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.wpcf7-form input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.wpcf7-form textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.wpcf7-form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 22px;
+}
+  
+.wpcf7-form input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+.wpcf7-response-output {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.wpcf7-mail-sent-ok {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.wpcf7-validation-errors {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    font-size: 20px;
+}
+
+/* Change font size for all form elements */
+.wpcf7 {
+    font-size: 16px; /* Adjust as needed */
+}
+
+/* Change font size for specific elements */
+.wpcf7-text,
+.wpcf7-textarea {
+    font-size: 18px; /* Adjust as needed */
+}
+/*---------------- Contact Form 7 end -------------------*/
+
+.hamburger{
+    display: none;
+}
+.bar{
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: white;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 900px) {
+    /* Menu hambuger */
+    .bar{
+        display: block;
+    }
+    .hamburger{
+        display: block;
+        float: right;
+        margin-right: 10px;
+        padding-top: 5px;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: rotate(45deg) translateY(11.5px); 
+    }  
+    .hamburger.active .bar:nth-child(3){
+        transform: rotate(-45deg) translateY(-11.5px); 
+    }
+    ul.list-active {
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: black;
+        transition: 0.3s;
+    }
+    .item-active{
+        padding: 1.5rem 0;
+    }
+    ul.list-active  .active{
+        right: 0;
+    } 
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}

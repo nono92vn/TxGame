@@ -1,0 +1,57 @@
+version: "3.9"
+
+services:
+  db:
+    image: mysql:latest
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: txgame@1
+      MYSQL_DATABASE: txgame
+      MYSQL_USER: txgame
+      MYSQL_PASSWORD: txgame
+    
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    volumes:
+      - ./wp:/var/www/html
+    restart: always
+    ports:
+      - 80:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: txgame
+      WORDPRESS_DB_USER: txgame
+      WORDPRESS_DB_PASSWORD: txgame
+
+  phpmyadmin:
+    depends_on:
+      - db
+    image: phpmyadmin:latest
+    volumes:
+      - ./phpmyadmin/phpmyadmin-misc.ini:/var/php/conf.d/phpmyadmin-misc.ini
+    restart: always
+    ports:
+      - 81:80
+    environment:
+      MEMORY_LIMIT: 512M
+      UPLOAD_LIMIT: 512M
+      MAX_EXECUTION_TIME: 300
+
+  nginx:
+    depends_on:
+      - wordpress
+    image: nginx:latest
+    volumes:
+      - ./wp:/var/www/html
+      - ./nginx/nginx.conf:/var/nginx/nginx.conf
+    restart: always
+    ports:
+      - 8080:80
+
+volumes:
+  db_data:
