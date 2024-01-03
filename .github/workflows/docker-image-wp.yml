@@ -3,11 +3,13 @@ name: Docker Image Wordpress TxGame CI
 on:
   workflow_dispatch:
   push:
-    branches: [ "main" ]
-  tags:
-      - 'v*'  
+    branches:
+      - 'main'
+    tags:
+      - 'v*'
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - 'main'
 
 jobs:
   build:
