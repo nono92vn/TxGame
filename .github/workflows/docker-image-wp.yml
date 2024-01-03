@@ -16,8 +16,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . -t wp:latest
+      run: docker build . -t /wp:latest
     - name: Publish the Docker image
       run: | 
            docker login -u nono92vn -p ${{ secrets.DOCKER_HUB_TOKEN }}
-           docker push wp:latest      
+           docker push /wp:latest      
