@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "nono92vn/TxGame",
+  "pipelineDirectory": "TxGame",
+  "workspaceDirectory": "TxGame/TxGame",
+  "repositories": {
+    "nono92vn/TxGame": {
+      "repositoryPath": "TxGame/TxGame",
+      "lastRunOn": "01/03/2024 14:31:34 +09:00"
+    }
+  },
+  "lastRunOn": "01/03/2024 14:31:34 +09:00"
+}
