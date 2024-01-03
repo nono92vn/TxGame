@@ -23,7 +23,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ secrets.DOCKER_HUB_USERNAME }}/wp:latest
+          images: ${{ secrets.DOCKER_HUB_USERNAME }}/wp
       -
         name: Login to Docker Hub
         if: github.event_name != 'pull_request'
