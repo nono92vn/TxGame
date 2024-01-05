@@ -11,12 +11,17 @@
         });
     });
 
+    // Hambuger menu
     $(document).ready(function(){
         $('.hamburger').click(function (){
-            $('.hamburger').toggle("change");
-            $('.list-active').toggle("nav-change");
+            if ($('.hamburger').hasClass("show-menu")){
+                $('.hamburger').removeClass("show-menu");
+                $('.list-active').removeClass("show-menu");
+            }
+            else {
+                $('.hamburger').addClass("show-menu");
+                $('.list-active').addClass("show-menu");
+            }
         });
     });
 })(jQuery);
-
-  

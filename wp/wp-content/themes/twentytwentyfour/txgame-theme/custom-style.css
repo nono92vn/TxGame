@@ -110,7 +110,8 @@ ul.list-active {
 
 ul.list-active li {
     display: inline-block;
-    padding: 0 20px;
+    padding: 10px 0;
+    margin: 0 20px;
 }
 
 li.lang-flag:hover {
@@ -123,6 +124,59 @@ li.lang-flag:hover {
 
 .active {
     background: red !important;
+}
+
+iframe.iframe-map {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 500px;
+}
+
+.width-middle {
+    width: 1000px;
+    height: 100%;
+}
+
+/* table */
+figure.table-contact {
+    width: 100%;
+    max-width:100%;
+    float: left;
+    display: block;
+    margin-bottom: 50px;
+}
+
+table.table-middle {
+    width: 65%;
+    margin: 0 auto !important;
+}
+
+table.table-middle tr {
+    border: 1px solid black !important;
+}
+
+table.table-middle tr td {
+    border: 1px solid black !important;
+    font-size: 24px;
+    margin: 0 10px !important;
+    padding: 15px !important;
+    background: #fff;
+}
+
+table.table-middle tr td:first-child{
+    background-color: rgb(224,235,246);
+}
+
+p.group-contact {
+    max-width: 100%;
+    width: 100%;
+}
+
+.footer-bottom {
+    float: left;
+    width: 100%;
+    margin-top: 20px;
 }
 
 /* --------------- Dropdown Button end -------------------*/
@@ -201,64 +255,142 @@ li.lang-flag:hover {
 .wpcf7-textarea {
     font-size: 18px; /* Adjust as needed */
 }
+
+.wpcf7 label{
+    display: block;
+} 
 /*---------------- Contact Form 7 end -------------------*/
 
 .hamburger{
     display: none;
+    cursor: pointer;
 }
+
 .bar{
+    display: block;
     width: 25px;
     height: 3px;
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background: white;
+    background-color: white;
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {}
+/* @media (max-width: 576px) {} */
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 900px) {
-    /* Menu hambuger */
-    .bar{
-        display: block;
+@media (min-width: 375px) and (max-width: 768px) {
+    .btn.btnMenu {
+        width: 100%;
+        background-size: 65%;
     }
+
+    .btn.btnMenu:hover {
+        background-size: 65%;
+    }
+
+    /* Menu hambuger */
     .hamburger{
         display: block;
         float: right;
         margin-right: 10px;
         padding-top: 5px;
     }
-    .hamburger.active .bar:nth-child(2){
+
+    .hamburger.show-menu .bar:nth-child(2){
         opacity: 0;
     }
-    .hamburger.active .bar:nth-child(1){
+
+    .hamburger.show-menu .bar:nth-child(1){
         transform: rotate(45deg) translateY(11.5px); 
-    }  
-    .hamburger.active .bar:nth-child(3){
+    }
+
+    .hamburger.show-menu .bar:nth-child(3){
         transform: rotate(-45deg) translateY(-11.5px); 
     }
+
     ul.list-active {
         position: fixed;
         right: -100%;
-        top: 70px;
+        top: 80px;
+        gap: 0;
         flex-direction: column;
         width: 100%;
         text-align: center;
-        background: black;
+        background-color: black;
         transition: 0.3s;
     }
-    .item-active{
-        padding: 1.5rem 0;
+
+    ul.list-active li {
+        margin: 0;
+        padding: 20px 0;
+        display: block;
     }
-    ul.list-active  .active{
-        right: 0;
-    } 
+
+    ul.list-active li:hover {
+       background-color: silver;
+    }
+    
+    li.item-active a{
+        text-decoration:none;
+    }
+
+    ul.list-active.show-menu {
+        height: 100%;
+        opacity: 90%;
+        overflow:hidden;
+    }
+
+    .show-menu{
+        right: 0 !important;
+        background-color: none !important;
+    }
+
+    iframe.iframe-map {
+        width: 100%;
+    }
+
+    /* table */
+    figure.table-contact {
+        width: 100%;
+        max-width:100%;
+        float: left;
+        display: block;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    table.table-middle {
+        width: 100%;
+        margin: 0 0 20px 0 !important;
+        padding: 0 !important;
+        border: 1px solid black !important;
+    }
+
+    table.table-middle tr {
+        width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 30px;
+    }
+
+    table.table-middle tr td {
+        border: none !important;
+        font-size: 24px;
+        margin: 0!important;
+        padding: 15px !important;
+        width: 100% !important;
+        display: inline-block;
+    }
+
+    table.table-middle tr td:first-child{
+        background-color: rgb(224,235,246);
+    }
  }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {}
+/* @media (min-width: 992px) {} */
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {}
+/* @media (min-width: 1200px) {} */
