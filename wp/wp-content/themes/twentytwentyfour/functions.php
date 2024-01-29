@@ -206,7 +206,7 @@ endif;
 add_action( 'init', 'twentytwentyfour_pattern_categories' );
 
 function my_custom_language_sort( $languages ) {
-    // Th?c hi?n logic s?p x?p c?a b?n ? ??y, v? d?: s?p x?p theo m? ng?n ng?:
+    // Sort menu language
     usort( $languages, function( $a, $b ) {
         return strcmp( $a['name'], $b['name'] );
     } );
