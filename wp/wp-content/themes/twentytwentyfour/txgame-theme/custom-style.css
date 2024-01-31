@@ -1,4 +1,4 @@
-body{
+body {
     padding: 0;
     font-size: 16px !important;
     color: #333333 !important;
@@ -8,7 +8,7 @@ body{
 .menu-left {
     width: 50% !important;
     height: auto;
-    padding: 20px 0!important;
+    padding: 20px 0 !important;
     margin: 0 !important;
     display: inline-block !important;
 }
@@ -21,12 +21,12 @@ body{
     display: inline-block !important;
 }
 
-h2{
-  position: relative;
-  margin-bottom: 1em !important;
+h2 {
+    position: relative;
+    margin-bottom: 1em !important;
 }
 
-h2:before{
+h2:before {
     content: '';
     position: absolute;
     bottom: -15px;
@@ -38,6 +38,27 @@ h2:before{
     transform: translateX(-50%);
     background-color: #333333;
     border-radius: 2px;
+}
+
+header {
+    position: relative;
+    /* Make the header relative to its container */
+}
+
+.header-style {
+    top: -150px;
+}
+
+.menu-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #65dcb8 !important;
+    z-index: 9999;
+    /* Make the fixed menu sit on top of other elements */
+    transition: top 0.8s ease-in-out;
+    border-bottom: 1px solid #333333;
 }
 
 /* ------------------- Dropdown Button ------------------- */
@@ -64,7 +85,8 @@ ul.list-language {
     position: relative;
 }
 
-li.item-active a, .main-breadcrumbs a {
+li.item-active a,
+.main-breadcrumbs a {
     text-decoration: none;
     color: #fff;
     padding: 5px 10px;
@@ -72,7 +94,8 @@ li.item-active a, .main-breadcrumbs a {
     transition: color .7s, text-decoration .7s;
 }
 
-li.item-active a:hover, .main-breadcrumbs a:hover {
+li.item-active a:hover,
+.main-breadcrumbs a:hover {
     color: #333333 !important;
     text-decoration-color: transparent !important;
 }
@@ -84,7 +107,6 @@ li.item-active a:hover, .main-breadcrumbs a:hover {
     padding: 0;
     margin: 0;
     opacity: 0.9;
-    /* border: 1px solid; */
     background-image: url("/wp-content/uploads/txgame-image/menu/world.png");
     background-repeat: no-repeat;
     background-size: 35%;
@@ -134,13 +156,13 @@ ul.language-menu li {
     position: relative;
 }
 
-ul.language-menu li a{
+ul.language-menu li a {
     padding: 5px 10px;
     font-size: 18px;
     color: #fff;
 }
 
-ul.language-menu li a:hover{
+ul.language-menu li a:hover {
     background: #00ffb2;
 }
 
@@ -164,10 +186,11 @@ ul.list-active li {
 }
 
 .show {
-    display:block;
+    display: block;
 }
 
-iframe.iframe-map, iframe {
+iframe.iframe-map,
+iframe {
     display: block;
     width: 100%;
     max-width: 100%;
@@ -182,7 +205,7 @@ iframe.iframe-map, iframe {
 /* Table */
 figure.table-contact {
     width: 100%;
-    max-width:100%;
+    max-width: 100%;
     float: left;
     display: block;
     margin-bottom: 50px;
@@ -205,8 +228,8 @@ table.table-middle tr td {
     background: #fff;
 }
 
-table.table-middle tr td:first-child{
-    background-color: rgb(224,235,246);
+table.table-middle tr td:first-child {
+    background-color: rgb(224, 235, 246);
 }
 
 p.group-contact {
@@ -220,7 +243,7 @@ p.group-contact {
     margin-top: 20px;
 }
 
-.active{
+.active {
     color: #333333 !important;
     text-decoration: underline !important;
 }
@@ -239,7 +262,7 @@ p.group-contact {
     border-radius: 5px;
     margin-bottom: 10px;
 }
-  
+
 .wpcf7-form input[type="email"] {
     width: 100%;
     padding: 10px;
@@ -274,7 +297,7 @@ p.group-contact {
     cursor: pointer;
     font-size: 22px;
 }
-  
+
 .wpcf7-form input[type="submit"]:hover {
     background-color: #00ffb2;
 }
@@ -298,26 +321,29 @@ p.group-contact {
 
 /* Change font size for all form elements */
 .wpcf7 {
-    font-size: 16px; /* Adjust as needed */
+    font-size: 16px;
+    /* Adjust as needed */
 }
 
 /* Change font size for specific elements */
 .wpcf7-text,
 .wpcf7-textarea {
-    font-size: 18px; /* Adjust as needed */
+    font-size: 18px;
+    /* Adjust as needed */
 }
 
-.wpcf7 label{
+.wpcf7 label {
     display: block;
-} 
+}
+
 /*---------------- Contact Form 7 end -------------------*/
 
-.hamburger{
+.hamburger {
     display: none;
     cursor: pointer;
 }
 
-.bar{
+.bar {
     display: block;
     width: 25px;
     height: 3px;
@@ -332,7 +358,7 @@ p.group-contact {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 375px) and (max-width: 768px) {
-    body{
+    body {
         font-size: 16px !important;
     }
 
@@ -346,23 +372,23 @@ p.group-contact {
     }
 
     /* Menu hambuger */
-    .hamburger{
+    .hamburger {
         display: block;
         float: right;
         margin-right: 10px;
         padding-top: 5px;
     }
 
-    .hamburger.show-menu .bar:nth-child(2){
+    .hamburger.show-menu .bar:nth-child(2) {
         opacity: 0;
     }
 
-    .hamburger.show-menu .bar:nth-child(1){
-        transform: rotate(45deg) translateY(11.5px); 
+    .hamburger.show-menu .bar:nth-child(1) {
+        transform: rotate(45deg) translateY(11.5px);
     }
 
-    .hamburger.show-menu .bar:nth-child(3){
-        transform: rotate(-45deg) translateY(-11.5px); 
+    .hamburger.show-menu .bar:nth-child(3) {
+        transform: rotate(-45deg) translateY(-11.5px);
     }
 
     ul.list-active {
@@ -377,7 +403,7 @@ p.group-contact {
         transition: 0.3s;
     }
 
-    ul.language-menu li a{
+    ul.language-menu li a {
         font-size: 16px;
     }
 
@@ -388,7 +414,7 @@ p.group-contact {
     }
 
     ul.list-active li:hover {
-       background-color: #00ffb2;
+        background-color: #00ffb2;
     }
 
     ul.list-active li a {
@@ -398,40 +424,41 @@ p.group-contact {
     }
 
     ul.list-active li a:hover {
-       background-color: #00ffb2;
+        background-color: #00ffb2;
     }
 
     ul.list-active li a.active {
         background-color: #00ffb2 !important;
     }
 
-    li.item-active:first-child{
+    li.item-active:first-child {
         margin-top: 50px;
     }
-    
-    li.item-active a{
-        text-decoration:none;
+
+    li.item-active a {
+        text-decoration: none;
     }
 
     ul.list-active.show-menu {
         height: 100%;
         opacity: 95%;
-        overflow:hidden;
+        overflow: hidden;
     }
 
-    .show-menu{
+    .show-menu {
         right: 0 !important;
         background-color: none !important;
     }
 
-    iframe.iframe-map, iframe {
+    iframe.iframe-map,
+    iframe {
         width: 100%;
     }
 
     /* Table */
     figure.table-contact {
         width: 100%;
-        max-width:100%;
+        max-width: 100%;
         float: left;
         display: block;
         margin: 0 !important;
@@ -455,14 +482,14 @@ p.group-contact {
     table.table-middle tr td {
         border: none !important;
         font-size: 24px;
-        margin: 0!important;
+        margin: 0 !important;
         padding: 15px !important;
         width: 100% !important;
         display: inline-block;
     }
 
-    table.table-middle tr td:first-child{
-        background-color: rgb(224,235,246);
+    table.table-middle tr td:first-child {
+        background-color: rgb(224, 235, 246);
     }
 
     .no-scroll {
@@ -473,12 +500,12 @@ p.group-contact {
         margin-left: 0px;
     }
 
-    table{
+    table {
         display: inline-block;
         overflow: auto;
         white-space: nowrap;
     }
- }
+}
 
 /* Large devices (desktops, 992px and up) */
 /* @media (min-width: 992px) {} */
